@@ -1,0 +1,3 @@
+[submodule "ArcadiaAtari2600Core/stella2014-libretro"]
+	path = ArcadiaAtari2600Core/stella2014-libretro
+	url = https://github.com/libretro/stella2014-libretro
