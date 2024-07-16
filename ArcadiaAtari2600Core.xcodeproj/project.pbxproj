@@ -239,6 +239,9 @@
 		95CC84B32C46E878009FB8DD /* file_stream_transforms.c in Sources */ = {isa = PBXBuildFile; fileRef = 95CC82A62C46DDA6009FB8DD /* file_stream_transforms.c */; };
 		95CC84B42C46E880009FB8DD /* stdstring.c in Sources */ = {isa = PBXBuildFile; fileRef = 95CC82A92C46DDA6009FB8DD /* stdstring.c */; };
 		95CC84B52C46E883009FB8DD /* vfs_implementation.c in Sources */ = {isa = PBXBuildFile; fileRef = 95CC82AF2C46DDA6009FB8DD /* vfs_implementation.c */; };
+		95CC84B82C4711D2009FB8DD /* ArcadiaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95CC84B72C4711D2009FB8DD /* ArcadiaCore.framework */; };
+		95CC84B92C4711D2009FB8DD /* ArcadiaCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 95CC84B72C4711D2009FB8DD /* ArcadiaCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		95CC84BC2C4711F0009FB8DD /* Atari2600Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CC84BB2C4711F0009FB8DD /* Atari2600Core.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -250,6 +253,20 @@
 			remoteInfo = ArcadiaAtari2600Core;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		95CC84BA2C4711D2009FB8DD /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				95CC84B92C4711D2009FB8DD /* ArcadiaCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		95CC823F2C46DD3C009FB8DD /* ArcadiaAtari2600Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArcadiaAtari2600Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -504,6 +521,8 @@
 		95CC83682C46DDA6009FB8DD /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		95CC83692C46DDA6009FB8DD /* Makefile.common */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Makefile.common; sourceTree = "<group>"; };
 		95CC836A2C46DDA6009FB8DD /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		95CC84B72C4711D2009FB8DD /* ArcadiaCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ArcadiaCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95CC84BB2C4711F0009FB8DD /* Atari2600Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Atari2600Core.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -511,6 +530,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95CC84B82C4711D2009FB8DD /* ArcadiaCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -531,6 +551,7 @@
 				95CC82412C46DD3C009FB8DD /* ArcadiaAtari2600Core */,
 				95CC824D2C46DD3D009FB8DD /* ArcadiaAtari2600CoreTests */,
 				95CC82402C46DD3C009FB8DD /* Products */,
+				95CC84B62C4711D2009FB8DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -549,6 +570,7 @@
 				95CC836B2C46DDA6009FB8DD /* stella2014-libretro */,
 				95CC82422C46DD3C009FB8DD /* ArcadiaAtari2600Core.h */,
 				95CC82432C46DD3C009FB8DD /* ArcadiaAtari2600Core.docc */,
+				95CC84BB2C4711F0009FB8DD /* Atari2600Core.swift */,
 			);
 			path = ArcadiaAtari2600Core;
 			sourceTree = "<group>";
@@ -1031,6 +1053,14 @@
 			path = "stella2014-libretro";
 			sourceTree = "<group>";
 		};
+		95CC84B62C4711D2009FB8DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				95CC84B72C4711D2009FB8DD /* ArcadiaCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1185,6 +1215,7 @@
 				95CC823B2C46DD3C009FB8DD /* Sources */,
 				95CC823C2C46DD3C009FB8DD /* Frameworks */,
 				95CC823D2C46DD3C009FB8DD /* Resources */,
+				95CC84BA2C4711D2009FB8DD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1225,6 +1256,7 @@
 				TargetAttributes = {
 					95CC823E2C46DD3C009FB8DD = {
 						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
 					};
 					95CC82482C46DD3D009FB8DD = {
 						CreatedOnToolsVersion = 15.4;
@@ -1313,6 +1345,7 @@
 				95CC84AC2C46E83F009FB8DD /* compat_strl.c in Sources */,
 				95CC84AD2C46E847009FB8DD /* fopen_utf8.c in Sources */,
 				95CC84AB2C46E83C009FB8DD /* compat_snprintf.c in Sources */,
+				95CC84BC2C4711F0009FB8DD /* Atari2600Core.swift in Sources */,
 				95CC84962C46E7D8009FB8DD /* MindLink.cxx in Sources */,
 				95CC84932C46E7CC009FB8DD /* M6502.cxx in Sources */,
 				95CC84A92C46E832009FB8DD /* compat_posix_string.c in Sources */,
@@ -1516,6 +1549,7 @@
 			buildSettings = {
 				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1553,6 +1587,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1563,6 +1598,7 @@
 			buildSettings = {
 				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1609,6 +1645,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 32DR4Q2NF7;
@@ -1630,6 +1667,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALLOW_TARGET_PLATFORM_SPECIALIZATION = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 32DR4Q2NF7;
