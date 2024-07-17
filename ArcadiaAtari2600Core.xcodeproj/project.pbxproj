@@ -240,7 +240,6 @@
 		95CC84B42C46E880009FB8DD /* stdstring.c in Sources */ = {isa = PBXBuildFile; fileRef = 95CC82A92C46DDA6009FB8DD /* stdstring.c */; };
 		95CC84B52C46E883009FB8DD /* vfs_implementation.c in Sources */ = {isa = PBXBuildFile; fileRef = 95CC82AF2C46DDA6009FB8DD /* vfs_implementation.c */; };
 		95CC84B82C4711D2009FB8DD /* ArcadiaCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95CC84B72C4711D2009FB8DD /* ArcadiaCore.framework */; };
-		95CC84B92C4711D2009FB8DD /* ArcadiaCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 95CC84B72C4711D2009FB8DD /* ArcadiaCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		95CC84BC2C4711F0009FB8DD /* Atari2600Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CC84BB2C4711F0009FB8DD /* Atari2600Core.swift */; };
 /* End PBXBuildFile section */
 
@@ -253,20 +252,6 @@
 			remoteInfo = ArcadiaAtari2600Core;
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		95CC84BA2C4711D2009FB8DD /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				95CC84B92C4711D2009FB8DD /* ArcadiaCore.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		95CC823F2C46DD3C009FB8DD /* ArcadiaAtari2600Core.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArcadiaAtari2600Core.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1215,7 +1200,6 @@
 				95CC823B2C46DD3C009FB8DD /* Sources */,
 				95CC823C2C46DD3C009FB8DD /* Frameworks */,
 				95CC823D2C46DD3C009FB8DD /* Resources */,
-				95CC84BA2C4711D2009FB8DD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1579,6 +1563,8 @@
 					"-O2",
 					"-DNDEBUG",
 					"-D__LIBRETRO__",
+					"-D_CRT_SECURE_NO_DEPRECATE",
+					"-DTHUMB_SUPPORT",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.davideandreoli.ArcadiaAtari2600Core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -1628,6 +1614,8 @@
 					"-O2",
 					"-DNDEBUG",
 					"-D__LIBRETRO__",
+					"-D_CRT_SECURE_NO_DEPRECATE",
+					"-DTHUMB_SUPPORT",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.davideandreoli.ArcadiaAtari2600Core;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
